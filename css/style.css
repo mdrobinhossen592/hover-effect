@@ -1,0 +1,104 @@
+/* 1st way css  */
+body{
+    height: 100vh;
+    width: 1024px;
+    margin: 0 auto;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main a{
+    display: inline-block;
+    color: #151515;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1111;
+}
+.main a span{
+    margin-left: 10px;
+}
+.main a .round_shap {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background: #ff6b00;
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    z-index: -1;
+    /* transform: translateX(224px); */
+    transition: .8s;
+}
+.main a:hover .round_shap{
+    height: 45px;
+    width: 45px;
+    top: 7px;
+    left: 4px;
+    z-index: -1;
+    transform: translateX(224px);
+}
+/* 1st way css end  */
+
+
+
+
+/* 2nd way css  */
+.submit_btn {
+    background: transparent;
+    color: #1e2125;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    padding: 15px 26px;
+    position: relative;
+    z-index: 111;
+    border: none;
+
+}
+
+.submit_btn::before {
+    content: "";
+    position: absolute;
+    background: #f9004d;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    top: -1px;
+    left: 0;
+    z-index: -1;
+    transform: translateX(0);
+    transition: .5s ease-in-out;
+}
+
+.submit_btn:hover::before {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    top: 5px;
+    left: 7px;
+    z-index: -1;
+    transform: translateX(221px);
+}
+
+.submit_btn span i{
+    padding-left: 15px;
+    transition: .5s;
+    transform: translate(-9px, 19px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.submit_btn:hover span i{
+    color: #fff;
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+}
+/* 2nd way css end */
